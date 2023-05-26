@@ -11,11 +11,12 @@ import ProtectedRoute from './Components/Helper/ProtectedRoute';
 import User from './Components/User/User';
 import UserProfile from './Components/User/UserProfile';
 import NotFound from './Components/NotFound';
+const appUrl = import.meta.env.VITE_APP_URL ?? '/Dogsorigamid/';
 
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={appUrl}>
         <UserStorage>
           <Header />
           <main className="AppBody">
