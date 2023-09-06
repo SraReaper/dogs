@@ -7,7 +7,7 @@ export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return defineConfig({
-    base: process.env.VITE_APP_URL ?? '/Dogsorigamid/',
+    base: process.env.VITE_APP_URL ?? '/dogs/',
     plugins: [
       react(),
       eslintPlugin({
